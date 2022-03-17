@@ -2,15 +2,15 @@ package by.kovaliov.userservice.service;
 
 import java.util.List;
 
-import by.kovaliov.userservice.model.User;
+import by.kovaliov.userservice.dto.UserDto;
 
 public interface UserService {
 
-  User createUser(User user);
+  UserDto createUser(UserDto user);
 
-  List<User> findUsers();
+  List<UserDto> findUsers();
 
-  User findUserById(Long id);
+  UserDto findUserById(Long id);
 
-  User updateUserById(Long id, User user);
+  UserDto updateUserById(Long id, UserDto user);
 }

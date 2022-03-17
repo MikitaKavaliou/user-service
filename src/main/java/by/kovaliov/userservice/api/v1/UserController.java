@@ -10,22 +10,22 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
-import by.kovaliov.userservice.model.User;
+import by.kovaliov.userservice.dto.UserDto;
 
 public interface UserController {
 
   @PostMapping(path = "/v1/users", consumes = MediaType.APPLICATION_JSON_VALUE)
-  ResponseEntity<Void> createUser(@RequestBody User user);
+  ResponseEntity<Void> createUser(@RequestBody UserDto user);
 
   @GetMapping(path = "/v1/users", produces = MediaType.APPLICATION_JSON_VALUE)
-  ResponseEntity<List<User>> getUsers();
+  ResponseEntity<List<UserDto>> getUsers();
 
   @GetMapping(path = "/v1/users/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
-  ResponseEntity<User> getUserById(@PathVariable Long id);
+  ResponseEntity<UserDto> getUserById(@PathVariable Long id);
 
   @PutMapping(
       path = "/v1/users/{id}",
       produces = MediaType.APPLICATION_JSON_VALUE,
       consumes = MediaType.APPLICATION_JSON_VALUE)
-  ResponseEntity<User> updateUserById(@PathVariable Long id, @RequestBody User user);
+  ResponseEntity<UserDto> updateUserById(@PathVariable Long id, @RequestBody UserDto user);
 }

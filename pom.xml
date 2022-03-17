@@ -11,7 +11,7 @@
   </parent>
   <groupId>by.kovaliov</groupId>
   <artifactId>user-service</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>0.0.2-SNAPSHOT</version>
   <name>user-service</name>
   <description>user-service</description>
   <properties>

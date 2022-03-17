@@ -48,4 +48,4 @@ jobs:
           name: ${{ secrets.DOCKERHUB_USERNAME }}/user-service
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
-          tags: echo ${{ steps.get-version.outputs.version }}
+          tags: ${{ steps.get-version.outputs.version }}
